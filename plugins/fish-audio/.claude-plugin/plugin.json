@@ -1,0 +1,22 @@
+{
+  "name": "fish-audio",
+  "displayName": "Fish Audio",
+  "version": "0.1.0",
+  "description": "Generate lifelike speech, find and clone voices, transcribe audio, produce multi-speaker audiobooks and podcasts, generate images and video, and write code against the Fish Audio API.",
+  "author": {
+    "name": "Fish Audio",
+    "url": "https://fish.audio"
+  },
+  "homepage": "https://docs.fish.audio",
+  "repository": "https://github.com/fishaudio/fish-audio-plugin",
+  "license": "MIT",
+  "keywords": [
+    "text-to-speech",
+    "tts",
+    "voice-cloning",
+    "speech-to-text",
+    "audiobook",
+    "podcast",
+    "audio"
+  ]
+}

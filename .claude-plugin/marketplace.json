@@ -1,0 +1,15 @@
+{
+  "name": "fish-audio",
+  "description": "Official Fish Audio plugins for Claude.",
+  "owner": {
+    "name": "Fish Audio",
+    "url": "https://fish.audio"
+  },
+  "plugins": [
+    {
+      "name": "fish-audio",
+      "source": "./plugins/fish-audio",
+      "description": "Generate lifelike speech, find and clone voices, transcribe audio, and produce audiobooks and podcasts with Fish Audio."
+    }
+  ]
+}

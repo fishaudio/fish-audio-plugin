@@ -1,0 +1,47 @@
+{
+  "name": "fish-audio",
+  "version": "0.1.0",
+  "description": "Generate lifelike speech, find and clone voices, transcribe audio, produce multi-speaker audiobooks and podcasts, generate images and video, and write code against the Fish Audio API.",
+  "author": {
+    "name": "Fish Audio",
+    "url": "https://fish.audio"
+  },
+  "homepage": "https://docs.fish.audio",
+  "repository": "https://github.com/fishaudio/fish-audio-plugin",
+  "license": "MIT",
+  "keywords": [
+    "text-to-speech",
+    "tts",
+    "voice-cloning",
+    "speech-to-text",
+    "audiobook",
+    "podcast",
+    "audio"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Fish Audio",
+    "shortDescription": "Generate speech, clone voices",
+    "longDescription": "Turn text into lifelike speech with voices from the Fish Audio library, clone a voice from a short sample, transcribe recordings, and produce multi-speaker audiobooks and podcasts in Story Studio, all with your Fish Audio account. Results play inline. Also generates images and video, and helps you write code against the Fish Audio SDKs and API.",
+    "developerName": "Fish Audio",
+    "category": "Creativity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://fish.audio",
+    "supportURL": "https://fish.audio/support/",
+    "privacyPolicyURL": "https://fish.audio/privacy/",
+    "termsOfServiceURL": "https://fish.audio/terms/",
+    "defaultPrompt": [
+      "Read this paragraph aloud in a warm narrator voice",
+      "Clone my voice from a recording",
+      "Turn this story into a multi-voice audiobook"
+    ],
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/logo.png",
+    "screenshots": []
+  }
+}
