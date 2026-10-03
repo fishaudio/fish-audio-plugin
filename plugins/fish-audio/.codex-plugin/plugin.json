@@ -1,6 +1,6 @@
 {
   "name": "fish-audio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate lifelike speech, find and clone voices, transcribe audio, produce multi-speaker audiobooks and podcasts, generate images and video, and write code against the Fish Audio API.",
   "author": {
     "name": "Fish Audio",
