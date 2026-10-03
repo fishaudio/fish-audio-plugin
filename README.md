@@ -47,7 +47,7 @@ plugins/fish-audio/
 scripts/sync-docs-skills.sh         refresh fish-audio-sdk and fish-audio-api
 ```
 
-`skills/fish-audio-sdk` and `skills/fish-audio-api` are mirrored from [fishaudio/docs](https://github.com/fishaudio/docs/tree/main/.mintlify/skills); edit them there. The `Sync docs skills` workflow checks daily and opens a pull request that mirrors any change and bumps the plugin version; run `scripts/sync-docs-skills.sh` to sync by hand.
+`skills/fish-audio-sdk` and `skills/fish-audio-api` are mirrored from [fishaudio/docs](https://github.com/fishaudio/docs/tree/main/.mintlify/skills); edit them there. The `Sync docs skills` workflow checks daily and commits any change to main with a patch version bump; run `scripts/sync-docs-skills.sh` to sync by hand.
 
 ## Develop
 

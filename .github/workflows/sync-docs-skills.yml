@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   sync:
@@ -17,10 +16,7 @@ jobs:
 
       - run: scripts/sync-docs-skills.sh
 
-      - name: Open pull request
-        env:
-          GH_TOKEN: ${{ github.token }}
-          BRANCH: sync-docs-skills
+      - name: Commit to main
         run: |
           if [ -z "$(git status --porcelain -- plugins/fish-audio/skills)" ]; then
             echo "Skills already match fishaudio/docs."
@@ -35,19 +31,7 @@ jobs:
             mv "$manifest.tmp" "$manifest"
           done
 
-          git switch -c "$BRANCH"
           git add plugins/fish-audio
           git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
             commit -m "Sync skills from fishaudio/docs, release $version"
-
-          if git fetch --quiet origin "$BRANCH" 2>/dev/null && git diff --quiet FETCH_HEAD HEAD; then
-            echo "$BRANCH is already up to date."
-            exit 0
-          fi
-          git push --force origin "$BRANCH"
-
-          if [ "$(gh pr list --head "$BRANCH" --state open --json number --jq length)" = 0 ]; then
-            gh pr create --base main --head "$BRANCH" \
-              --title "Sync skills from fishaudio/docs" \
-              --body "fish-audio-sdk / fish-audio-api changed in [fishaudio/docs](https://github.com/fishaudio/docs/tree/main/.mintlify/skills). This PR mirrors them and bumps the plugin version."
-          fi
+          git push origin HEAD:main
