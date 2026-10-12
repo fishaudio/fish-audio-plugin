@@ -24,6 +24,8 @@ Generating speech, transcribing, and generating images, video, or Studio audio s
 
 The plugin sends the text, audio, and prompts you ask it to process to Fish Audio at `api.fish.audio`, under the account you signed in with. Voices you clone and Studio projects you create are saved to that account. Uploaded files are deleted after 7 days. See the [privacy policy](https://fish.audio/privacy/) and [terms of service](https://fish.audio/terms/).
 
+The connector signs in with OAuth, so the plugin never reads an API key or other credential from your machine on its own. The `fish-audio-sdk` and `fish-audio-api` skills write code for your project that reads a Fish Audio API key from the `FISH_API_KEY` environment variable and sends it only to `api.fish.audio`. That happens only when you run that code, or ask the agent to run it or one of the skills' `curl` examples.
+
 ## Support
 
 [fish.audio/support](https://fish.audio/support/) · [Documentation](https://docs.fish.audio)
